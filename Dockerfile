@@ -4,8 +4,10 @@ EXPOSE 6419
 
 WORKDIR /data
 
-CMD ["grip", ".", "0.0.0.0"]
+ENTRYPOINT ["docker-entrypoint.sh"]
 
 RUN apk --no-cache add py-pip
 
 RUN pip install --no-cache-dir grip
+
+ADD docker-entrypoint.sh /bin/docker-entrypoint.sh
