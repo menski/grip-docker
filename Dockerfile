@@ -6,7 +6,7 @@ WORKDIR /data
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-RUN apk --no-cache add py-pip
+RUN apk --no-cache add py2-pip
 
 RUN pip install --no-cache-dir grip
 
