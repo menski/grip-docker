@@ -5,7 +5,7 @@ GitHub README.md Preview as Docker Image - [grip](https://github.com/joeyespo/gr
 ## Build
 
 ```bash
-docker build -t menski/grip .
+make build
 ```
 
 ## Run
@@ -14,7 +14,7 @@ docker build -t menski/grip .
 ### Manually
 
 ```bash
-docker run -it --rm -v $PWD:/data:ro -p 6419:6419 menski/grip
+docker run -it --rm -v $HOME/.grip:/root/.grip -v $PWD:/data:ro -p 6419:6419 menski/grip
 ```
 
 ### Script
